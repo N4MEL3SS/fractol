@@ -1,4 +1,4 @@
-NAME = fractol
+NAME = fractol.out
 OS = $(shell uname)
 
 CC = clang
@@ -23,7 +23,7 @@ $(NAME): $(OBJ)
 	$(CC) $(OBJ) $(MLX_LNK) -o $(NAME)
 
 %.o: %.c
-	$(CC) $(FLAGS) -Imlx -c $< -o $@
+	$(CC) -Imlx -c $< -o $@
 
 clean:
 	@rm -rf $(OBJ)
