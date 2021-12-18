@@ -1,6 +1,7 @@
-#ifndef FRACTOL_FRACTOL_H
-# define FRACTOL_FRACTOL_H
+#ifndef FRACTOL_H
+# define FRACTOL_H
 
+# include "mlx/mlx.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -10,7 +11,7 @@
 # define WIDTH 1280
 # define HEIGHT 720
 
-typedef struct		s_image
+typedef struct s_image
 {
 	void		*image;
 	char		*ptr;
@@ -24,6 +25,15 @@ typedef struct s_mlx
 	void		*mlx;
 	void		*win;
 	t_image		*image;
+	double		coff;
+	int			k;
 }				t_mlx;
 
-#endif //FRACTOL_FRACTOL_H
+t_image		*new_image(t_mlx *mlx);
+void		draw(t_mlx *mlx_val, double coff);
+int			render(int keycode, t_mlx *mlx_val);
+
+int			close_win(t_mlx *frac);
+int			close_esc(int keycode, t_mlx *frac);
+
+#endif //FRACTOL_H

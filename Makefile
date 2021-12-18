@@ -1,11 +1,12 @@
-NAME = fractol.out
+NAME = fractol
 OS = $(shell uname)
 
 CC = clang
 FLAGS = -Wall -Wextra -Werror
 FRAME_LINUX = -lXext -lX11
 FRAME_MAC = -framework OpenGL -framework AppKit
-SRC = main.c
+
+SRC = main.c image.c close.c
 
 ifeq ($(OS), Linux)
 	MLX = ./mlx_linux/

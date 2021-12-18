@@ -40,4 +40,4 @@ add_executable(main.c
 		mlx_linux/mlx_set_font.c
 		mlx_linux/mlx_string_put.c
 		mlx_linux/mlx_xpm.c
-		mlx_linux/mlx_xpm.c.ok fractol.h)
+		mlx_linux/mlx_xpm.c.ok fractol.h close.c image.c)
